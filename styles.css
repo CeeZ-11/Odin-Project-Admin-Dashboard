@@ -59,20 +59,34 @@ h6 {
   flex-direction: column;
   grid-area: 1 / 1 / 3 / 2;
   background-color: var(--bg-color-sidebar);
-  padding: 20px;
+  padding: 20px 80px 20px 20px;
   font-weight: bold;
   color: var(--color-sidebar);
   gap: 25px;
 }
 
 #sidebar #logo {
-  font-size: 1.5em;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#navigation > div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 #navigation,
 #user-options {
-  font-size: 21px;
-  line-height: 2;
+  line-height: 2.5;
+}
+
+#user-options > div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 #header {
@@ -87,6 +101,7 @@ h6 {
 
 #searchbar {
   grid-area: 1 / 1 / 2 / 2;
+  display: flex;
 }
 
 .search-input {
@@ -98,20 +113,79 @@ h6 {
   padding-left: 20px;
 }
 
+.search-button {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: none;
+}
+
+.search-input {
+  background-color: rgb(243, 243, 243);
+  border: none;
+  border-radius: 15px;
+  padding-left: 20px;
+}
+
 #user-notif {
   display: flex;
   grid-area: 1 / 2 / 2 / 3;
+  gap: 20px;
+  align-items: center;
+  padding-left: 50px;
 }
 
+.notification {
+  width: 20px;
+  height: 20px;
+}
+
+#user-notif img {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
 #user-info {
   display: flex;
   grid-area: 2 / 1 / 3 / 2;
+  gap: 15px;
+  align-items: center;
+  line-height: 1.2;
+  padding: 5px 0px 10px 35px;
+}
+
+#user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+#user-info > div:nth-child(2) > p:first-of-type {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#user-info > div:nth-child(2) > p:last-child {
+  font-weight: bold;
+}
+
+#user-info p {
+  margin: 0;
 }
 
 #buttons {
   grid-area: 2 / 2 / 3 / 3;
   display: flex;
-  justify-content: space-evenly;
+  gap: 30px;
+}
+
+#buttons button {
+  background-color: var(--bg-color-button);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 4px 20px;
+  font-size: 13px;
 }
 
 #content {
@@ -127,8 +201,8 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 20px auto;
-  gap: 10px;
-  margin: 10px;
+  gap: 15px;
+  margin: 10px 15px;
   background-color: var(--bg-color-content);
 }
 
@@ -161,8 +235,8 @@ h6 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 20px auto;
-  margin: 10px 10px 10px 0px;
-  gap: 10px;
+  margin: 10px 15px 10px 5px;
+  gap: 15px;
 }
 
 #announcements div {
@@ -184,7 +258,7 @@ hr {
 
 #trending {
   grid-area: 2 / 2 / 3 / 3;
-  margin: 10px 10px 10px 0px;
+  margin: 10px 15px 10px 5px;
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr;
@@ -206,4 +280,14 @@ hr {
 .trending-info > :first-child {
   display: flex;
   align-items: center;
+}
+
+.dashboard {
+  width: 30px;
+  height: 30px;
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
 }
