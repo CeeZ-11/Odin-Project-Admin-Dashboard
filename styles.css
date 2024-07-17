@@ -12,6 +12,7 @@
   --bg-color-search-bar: lightgray;
   --color-sidebar: white;
   --bg-color-button: #0284c7;
+  overflow: hidden;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 5fr;
   min-height: 100vh;
 }
 
@@ -59,7 +60,7 @@ h6 {
   flex-direction: column;
   grid-area: 1 / 1 / 3 / 2;
   background-color: var(--bg-color-sidebar);
-  padding: 20px 80px 20px 20px;
+  padding: 20px 20px 20px 20px;
   font-weight: bold;
   color: var(--color-sidebar);
   gap: 25px;
@@ -69,7 +70,6 @@ h6 {
   display: flex;
   gap: 10px;
   align-items: center;
-  justify-content: center;
 }
 
 #navigation > div {
@@ -132,7 +132,7 @@ h6 {
   grid-area: 1 / 2 / 2 / 3;
   gap: 20px;
   align-items: center;
-  padding-left: 50px;
+  justify-content: center;
 }
 
 .notification {
@@ -167,6 +167,7 @@ h6 {
 
 #user-info > div:nth-child(2) > p:last-child {
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 #user-info p {
@@ -177,6 +178,7 @@ h6 {
   grid-area: 2 / 2 / 3 / 3;
   display: flex;
   gap: 30px;
+  justify-content: center;
 }
 
 #buttons button {
@@ -184,7 +186,7 @@ h6 {
   color: white;
   border: none;
   border-radius: 15px;
-  padding: 4px 20px;
+  padding: 4px 25px;
   font-size: 13px;
 }
 
@@ -219,15 +221,35 @@ h6 {
   background-color: white;
 }
 
+#content h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#content p {
+  line-height: 1;
+}
+
 .project-info {
   padding: 0px 20px;
+}
+
+.p-icons {
+  width: 20px;
+  height: 20px;
+}
+
+.projects h5 {
+  font-weight: bold;
+  font-size: 1.05em;
 }
 
 .interaction {
   display: grid;
   grid-auto-flow: column;
   justify-content: end;
-  padding-right: 10px;
+  padding-right: 20px;
+  gap: 20px;
 }
 
 #announcements {
@@ -241,6 +263,15 @@ h6 {
 
 #announcements div {
   background-color: white;
+}
+
+#announcements h5 {
+  font-weight: bold;
+}
+
+#announcements p {
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 hr {
@@ -270,6 +301,14 @@ hr {
   padding: 20px;
   display: grid;
   align-items: center;
+  justify-content: start;
+  gap: 15px;
+}
+
+.trending-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .trending > div {
@@ -277,9 +316,22 @@ hr {
   grid-auto-flow: column;
 }
 
-.trending-info > :first-child {
+.trending-info p:first-child {
   display: flex;
   align-items: center;
+  font-weight: bold;
+}
+
+.trending-info > div {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.trending img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
 }
 
 .dashboard {
